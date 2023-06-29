@@ -1,7 +1,5 @@
-export default function Index() {
+export default async function Index() {
   return (
-    <h1 className="text-5xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div className="text-5xl">Portfolio</div>
+  );
 }
