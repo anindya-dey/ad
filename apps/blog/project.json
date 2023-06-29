@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "blog",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/portfolio",
+  "sourceRoot": "apps/blog",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/portfolio"
+        "outputPath": "dist/apps/blog"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/portfolio"
+          "outputPath": "apps/blog"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "portfolio:build",
+        "buildTarget": "blog:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "portfolio:build:development",
+          "buildTarget": "blog:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "portfolio:build:production",
+          "buildTarget": "blog:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "portfolio:build:production"
+        "buildTarget": "blog:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/portfolio/jest.config.ts",
+        "jestConfig": "apps/blog/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -60,19 +60,19 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/portfolio/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/blog/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/portfolio/cypress.config.ts",
+        "cypressConfig": "apps/blog/cypress.config.ts",
         "testingType": "e2e",
-        "devServerTarget": "portfolio:serve"
+        "devServerTarget": "blog:serve"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "portfolio:serve:production"
+          "devServerTarget": "blog:serve:production"
         }
       }
     }
