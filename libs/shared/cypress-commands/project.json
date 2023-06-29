@@ -1,0 +1,26 @@
+{
+  "name": "shared-cypress-commands",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/cypress-commands/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/cypress-commands",
+        "main": "libs/shared/cypress-commands/src/index.ts",
+        "tsConfig": "libs/shared/cypress-commands/tsconfig.lib.json",
+        "assets": ["libs/shared/cypress-commands/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/cypress-commands/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
