@@ -62,6 +62,19 @@
       "options": {
         "lintFilePatterns": ["apps/portfolio/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/portfolio/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "portfolio:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "portfolio:serve:production"
+        }
+      }
     }
   },
   "tags": []
