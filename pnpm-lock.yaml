@@ -103,6 +103,9 @@ devDependencies:
   jest-environment-jsdom:
     specifier: ^29.5.0
     version: 29.5.0
+  jest-environment-node:
+    specifier: ^29.4.1
+    version: 29.5.0
   nx:
     specifier: 16.4.0
     version: 16.4.0
@@ -3078,9 +3081,8 @@ packages:
   /@yarnpkg/lockfile@1.1.0:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
 
-  /@yarnpkg/parsers@3.0.0-rc.47:
-    resolution: {integrity: sha512-ri/QnMiMobEgRUBF1fPcxH1ICa9jsG8y4tDNRAuk6zPdCPkSAzACKaXjmDiAZFiwKxK4hTVj0E8nklgWFeTLng==}
-    engines: {node: '>=18.12.0'}
+  /@yarnpkg/parsers@3.0.0-rc.47.1:
+    resolution: {integrity: sha512-qKP4Rp7mc0lbERrxTPiEkwZiwIUUg3OhjbM4qcVWnVp1/RUP13vF4P4jHGOQY/AhyGOZKDjdRpaupCYl+phLOQ==}
     dependencies:
       js-yaml: 3.14.1
       tslib: 2.6.0
@@ -7011,7 +7013,7 @@ packages:
       '@nrwl/tao': 16.4.0
       '@parcel/watcher': 2.0.4
       '@yarnpkg/lockfile': 1.1.0
-      '@yarnpkg/parsers': 3.0.0-rc.47
+      '@yarnpkg/parsers': 3.0.0-rc.47.1
       '@zkochan/js-yaml': 0.0.6
       axios: 1.4.0
       chalk: 4.1.2
