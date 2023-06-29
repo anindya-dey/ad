@@ -7,13 +7,14 @@
     "build": {
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "defaultConfiguration": "development",
       "options": {
-        "outputPath": "dist/apps/portfolio"
+        "outputPath": "dist/apps/portfolio",
+        "postcssConfig": "apps/portfolio/postcss.config.js"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/portfolio"
+          "outputPath": "dist/apps/portfolio"
         },
         "production": {}
       }
