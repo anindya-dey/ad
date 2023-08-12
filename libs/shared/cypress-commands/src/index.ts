@@ -1,1 +1,1 @@
-import "./lib/shared-cypress-commands";
+import './lib/shared-cypress-commands';
