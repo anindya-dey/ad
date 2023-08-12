@@ -1,7 +1,7 @@
-export default async function Index() {
+export default function NotFound() {
   return (
     <div className="text-5xl" data-cy="page-title">
-      Blog
+      404 | Not Found
     </div>
   );
 }

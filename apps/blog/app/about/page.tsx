@@ -1,7 +1,7 @@
-export default async function Index() {
+export default function About() {
   return (
     <div className="text-5xl" data-cy="page-title">
-      Blog
+      About
     </div>
   );
 }
