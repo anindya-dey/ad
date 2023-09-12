@@ -12,6 +12,22 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/seed/picsum/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+        port: '',
+        pathname: '/img/component-images/**',
+      },
+    ],
+  },
 };
 
 const plugins = [
