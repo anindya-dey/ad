@@ -1,3 +1,5 @@
+import { FeaturedPosts } from "./components";
+
 async function getData() {
   const res = await fetch('https://api.example.com/...')
   // The return value is *not* serialized
@@ -12,9 +14,6 @@ async function getData() {
 }
 
 export default async function Index() {
-  return (
-    <div className="text-5xl" data-cy="page-title">
-      Blog
-    </div>
-  );
+  return <FeaturedPosts />;
 }
+

@@ -3,37 +3,32 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navLinks = [
+const navBarItems = [
   {
     name: 'home',
+    displayName: 'Home',
     href: '/',
   },
   {
     name: 'about',
+    displayName: 'About',
     href: '/about',
+  },
+  {
+    name: 'my blog',
+    displayName: 'My Blog',
+    href: '/posts/2023/09/my-blog',
   },
 ];
 
-export default function NavBar() {
+export function NavBar() {
   const pathname = usePathname();
 
   return (
     <>
-      {navLinks.map((navLink) => {
-        const isActive = pathname === navLink.href;
-
-        return (
-          <>
-            <Link
-              key={navLink.name}
-              href={navLink.href}
-              className={`${isActive ? 'text-blue-700' : 'text-gray-900'} mr-2 text-lg`}
-            >
-              {navLink.name}
-            </Link>
-          </>
-        );
-      })}
+      {
+        navBarItems.map(navBarItem => <Link key={navBarItem.name} href={navBarItem.href}>{navBarItem.displayName}</Link>)
+      }
     </>
   );
 }
