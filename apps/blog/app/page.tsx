@@ -1,4 +1,4 @@
-import FeaturedPosts from "./components/featured-posts/featured-posts.component";
+import { FeaturedPosts } from "./components";
 
 async function getData() {
   const res = await fetch('https://api.example.com/...')

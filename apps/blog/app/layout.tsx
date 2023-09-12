@@ -1,5 +1,5 @@
 import './global.css';
-import NavBar from './components/navbar/navbar.component';
+import { NavBar } from './components';
 
 import { Metadata } from 'next';
 
