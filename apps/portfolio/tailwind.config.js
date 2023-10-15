@@ -28,6 +28,9 @@ module.exports = {
       backgroundImage: {
         "homeBg": "url('/background/bg.jpg')",
         "homeBg-dark": "url('/background/bg-dark.jpg')"
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       }
     },
   },
