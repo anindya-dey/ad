@@ -24,12 +24,12 @@ const pages = [
   {
     name: 'Resume',
     icon: <CgNotes />,
-    href: '/',
+    href: '/resume',
   },
   {
     name: 'Contact',
     icon: <RiContactsBookLine />,
-    href: '/',
+    href: '/contact',
   },
 ];
 
