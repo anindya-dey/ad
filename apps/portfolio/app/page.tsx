@@ -5,6 +5,7 @@ import { AiOutlineCloudDownload } from 'react-icons/ai';
 import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
 
 import avatar from '../public/avatar.jpg';
+import resume from '../public/resume/Anindya_Dey_Senior_Software_Engineer.pdf';
 
 
 export const metadata: Metadata = {
@@ -58,8 +59,8 @@ export default async function Index() {
         ))}
       </div>
       <div className="mt-10">
-        <Link href={''}>
-          <div className="flex items-center px-8 py-3 mx-4 text-xl text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:bg-gradient-to-r hover:from-[#DD2476]  hover:to-[#fa5252ef] transition duration-300 ease-in-out">
+        <Link href={resume} download>
+          <div className="flex justify-center items-center px-8 py-3 mx-4 text-xl text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:bg-gradient-to-r hover:from-[#DD2476]  hover:to-[#fa5252ef] transition duration-300 ease-in-out">
             <span className="mr-2">
               <AiOutlineCloudDownload />
             </span>

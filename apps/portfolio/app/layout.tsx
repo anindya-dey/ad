@@ -44,7 +44,7 @@ export default function RootLayout({
         <div className="container py-10">
           <nav className="flex justify-between">
             <div>
-              <Image src={logo} alt="logo" className="w-20 h-20" />
+              <Image src={logo} alt="logo" className="w-20 h-20 drop-shadow-lg" />
             </div>
             <div className="flex items-center justify-around">
               {pages.map((page) => (
