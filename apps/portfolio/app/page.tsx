@@ -33,16 +33,16 @@ const socialLinks = [
 
 export default async function Index() {
   return (
-    <div className="flex flex-col items-center py-10 md:py-24">
+    <div className="flex flex-col items-center py-28 md:py-24">
       <Image
         src={'/avatar.jpg'}
         alt="avatar"
-        className="rounded-full h-[250px] w-[250px] transition duration-300 ease-in-out hover:scale-105"
+        className="rounded-full h-[150px] w-[150px] md:h-[250px] md:w-[250px] transition duration-300 ease-in-out hover:scale-105"
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-4xl font-medium text-gray-800">Anindya Dey</h1>
-      <h2 className="mt-2 text-lg text-gray-500">
+      <h1 className="mt-10 text-2xl font-thin md:text-gray-800 md:font-thin md:text-4xl">Anindya Dey</h1>
+      <h2 className="mt-2 text-sm text-gray-400 md:font-thin md:text-gray-600 md:text-lg">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
@@ -53,8 +53,8 @@ export default async function Index() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="p-2 mx-2 transition duration-300 ease-in-out bg-white rounded-md shadow-md hover:-translate-y-1">
-              <span className="text-lg">{social.icon}</span>
+            <div className="p-2 mx-3 transition duration-300 ease-in-out bg-white rounded-md shadow-md first-letter:hover:-translate-y-1 md:p-3 md:mx-4">
+              <span className="text-2xl md:text-md">{social.icon}</span>
             </div>
           </Link>
         ))}
@@ -63,7 +63,7 @@ export default async function Index() {
         <Link
           href={'resume.pdf'}
           download
-          className="hover:transition-all flex justify-center items-center px-8 py-3 mx-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476]  hover:to-[#fa5252ef]"
+          className="hover:transition-all flex justify-center items-center px-8 py-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476]  hover:to-[#fa5252ef]"
         >
           <span className="mr-2">
             <AiOutlineCloudDownload className="text-lg" />

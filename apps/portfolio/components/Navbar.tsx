@@ -37,7 +37,7 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <nav className="flex justify-between px-4 py-2 md:px-0 md:py-8 bg-white/30 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent">
+    <nav className="fixed top-0 flex justify-between w-full px-4 py-2 m-0 shadow-sm md:static md:px-0 md:py-8 bg-white/30 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent md:shadow-none">
       <div className="">
         <Link href={'/'}>
           <Image src={'/logo.png'} alt="logo" width={64} height={64} />
@@ -45,7 +45,7 @@ export default function NavBar() {
       </div>
       <div className="flex items-center justify-around">
         {navItems.map((page) => (
-          <Link key={page.name} href={page.href}>
+          <Link key={page.name} href={page.href} prefetch>
             <div
               className={
                 path === page.href
@@ -58,7 +58,7 @@ export default function NavBar() {
             </div>
           </Link>
         ))}
-        <div className="items-center p-4 ml-4 bg-white rounded-full shadow-md cursor-pointer text-md">
+        <div className="items-center p-4 ml-4 text-gray-700 bg-white rounded-full shadow-md cursor-pointer text-md">
           <FiMoon />
         </div>
         <div className="md:hidden items-center p-4 ml-4 bg-[#ef4060] text-white rounded-full shadow-md cursor-pointer text-md">
