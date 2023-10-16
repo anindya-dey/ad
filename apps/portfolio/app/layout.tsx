@@ -23,7 +23,7 @@ export default function RootLayout({
               <NavBar />
             </div>
           </nav>
-          <main className="flex flex-col items-center mt-6 border border-white bg-white/10 rounded-2xl backdrop-blur-sm drop-shadow-md">
+          <main className="flex flex-col items-center mt-6 border border-white drop-shadow-md bg-white/10 rounded-2xl backdrop-blur-sm">
             {children}
           </main>
         </div>
