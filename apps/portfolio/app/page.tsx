@@ -35,35 +35,40 @@ export default async function Index() {
   return (
     <div className="flex flex-col items-center py-24">
       <Image
-        src={"/avatar.jpg"}
+        src={'/avatar.jpg'}
         alt="avatar"
-        className="rounded-full h-[250px] w-[250px]"
+        className="rounded-full h-[250px] w-[250px] transition duration-300 ease-in-out hover:scale-105"
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-4xl font-medium text-gray-700">
-        Anindya Dey
-      </h1>
+      <h1 className="mt-10 text-4xl font-medium text-gray-800">Anindya Dey</h1>
       <h2 className="mt-2 text-lg text-gray-500">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
         {socialLinks.map((social) => (
-          <Link key={social.href} href={social.href} target="_blank">
-            <div className="p-3 mx-2 bg-white rounded-md shadow-md">
-              <span className="text-md">{social.icon}</span>
+          <Link
+            key={social.href}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="p-2 mx-2 transition duration-300 ease-in-out bg-white rounded-md shadow-md hover:-translate-y-1">
+              <span className="text-lg">{social.icon}</span>
             </div>
           </Link>
         ))}
       </div>
       <div className="mt-10">
-        <Link href={"resume.pdf"} download>
-          <div className="flex justify-center items-center px-8 py-3 mx-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:bg-gradient-to-r hover:from-[#DD2476]  hover:to-[#fa5252ef] transition duration-300 ease-in-out">
-            <span className="mr-2">
-              <AiOutlineCloudDownload className="text-lg" />
-            </span>
-            <span className="text-sm">Download Resume</span>
-          </div>
+        <Link
+          href={'resume.pdf'}
+          download
+          className="hover:transition-all flex justify-center items-center px-8 py-3 mx-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476]  hover:to-[#fa5252ef]"
+        >
+          <span className="mr-2">
+            <AiOutlineCloudDownload className="text-lg" />
+          </span>
+          <span className="text-sm">Download Resume</span>
         </Link>
       </div>
     </div>
