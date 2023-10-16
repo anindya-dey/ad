@@ -7,7 +7,6 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { FaRegUser } from 'react-icons/fa';
 import { CgNotes } from 'react-icons/cg';
 import { RiContactsBookLine } from 'react-icons/ri';
-import { FiSun, FiMoon } from 'react-icons/fi';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ThemeSwitch from './ThemeSwitch';
 
