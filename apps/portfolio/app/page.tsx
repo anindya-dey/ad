@@ -4,10 +4,6 @@ import Image from 'next/image';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
 import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
 
-import avatar from '../public/avatar.jpg';
-import resume from '../public/resume/Anindya_Dey_Senior_Software_Engineer.pdf';
-
-
 export const metadata: Metadata = {
   title: 'Portfolio | Anindya Dey',
 };
@@ -37,13 +33,15 @@ const socialLinks = [
 
 export default async function Index() {
   return (
-    <div className="py-28">
+    <div className="flex flex-col items-center py-24">
       <Image
-        src={avatar}
+        src={"/avatar.jpg"}
         alt="avatar"
-        className="rounded-full h-[300px] w-[300px]"
+        className="rounded-full h-[250px] w-[250px]"
+        width={250}
+        height={250}
       />
-      <h1 className="mt-10 text-4xl font-semibold text-gray-700">
+      <h1 className="mt-10 text-4xl font-medium text-gray-700">
         Anindya Dey
       </h1>
       <h2 className="mt-2 text-lg text-gray-500">
@@ -51,20 +49,20 @@ export default async function Index() {
       </h2>
       <div className="flex items-center justify-between mt-10">
         {socialLinks.map((social) => (
-          <Link key={social.href} href={social.href}>
+          <Link key={social.href} href={social.href} target="_blank">
             <div className="p-3 mx-2 bg-white rounded-md shadow-md">
-              <span className="text-xl">{social.icon}</span>
+              <span className="text-md">{social.icon}</span>
             </div>
           </Link>
         ))}
       </div>
       <div className="mt-10">
-        <Link href={resume} download>
-          <div className="flex justify-center items-center px-8 py-3 mx-4 text-xl text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:bg-gradient-to-r hover:from-[#DD2476]  hover:to-[#fa5252ef] transition duration-300 ease-in-out">
+        <Link href={"resume.pdf"} download>
+          <div className="flex justify-center items-center px-8 py-3 mx-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:bg-gradient-to-r hover:from-[#DD2476]  hover:to-[#fa5252ef] transition duration-300 ease-in-out">
             <span className="mr-2">
-              <AiOutlineCloudDownload />
+              <AiOutlineCloudDownload className="text-lg" />
             </span>
-            <span>Download CV</span>
+            <span className="text-sm">Download Resume</span>
           </div>
         </Link>
       </div>
