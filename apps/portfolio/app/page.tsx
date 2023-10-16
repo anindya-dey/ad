@@ -33,7 +33,7 @@ const socialLinks = [
 
 export default async function Index() {
   return (
-    <div className="flex flex-col items-center py-24">
+    <div className="flex flex-col items-center py-10 md:py-24">
       <Image
         src={'/avatar.jpg'}
         alt="avatar"

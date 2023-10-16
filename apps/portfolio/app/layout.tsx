@@ -12,18 +12,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-fixed bg-center bg-no-repeat bg-cover bg-homeBg dark:bg-homeBg-dark font-poppins">
-        <div className="container py-6">
-          <nav className="flex justify-between">
-            <div>
-              <Link href={'/'}>
-                <Image src={'/logo.png'} alt="logo" width={64} height={64} />
-              </Link>
-            </div>
-            <div className="flex items-center justify-around">
-              <NavBar />
-            </div>
-          </nav>
-          <main className="flex flex-col items-center mt-6 border border-white drop-shadow-md bg-white/10 rounded-2xl backdrop-blur-sm">
+        <div className="container">
+          <NavBar />
+          <main className="flex flex-col items-center mt-6 md:mt-0 md:border-white md:border md:drop-shadow-md md:bg-white/10 md:rounded-2xl md:backdrop-blur-sm">
             {children}
           </main>
         </div>
