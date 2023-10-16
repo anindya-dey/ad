@@ -41,10 +41,10 @@ export default async function Index() {
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-zinc-400">
+      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-white">
         Anindya Dey
       </h1>
-      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-zinc-400">
+      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-white">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
@@ -65,7 +65,7 @@ export default async function Index() {
         <Link
           href={'resume.pdf'}
           download
-          className="hover:transition-all flex justify-center items-center px-8 py-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476] hover:to-[#fa5252ef]"
+          className="flex justify-center items-center px-8 py-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476] hover:to-[#fa5252ef] transition duration-300 ease-linear"
         >
           <span className="mr-2">
             <AiOutlineCloudDownload className="text-lg" />
