@@ -20,14 +20,14 @@ export default function ThemeSwitch() {
     <>
       {theme === 'light' ? (
         <span
-          className="items-center p-4 ml-4 text-gray-700 bg-white rounded-full shadow-md cursor-pointer text-md"
+          className="items-center p-4 ml-6 text-gray-700 bg-white rounded-full shadow-md cursor-pointer text-md"
           onClick={() => setTheme('dark')}
         >
           <FiMoon />
         </span>
       ) : (
         <span
-          className="items-center p-4 ml-4 text-purple-200 bg-purple-900 rounded-full shadow-md cursor-pointer text-md"
+          className="items-center p-4 ml-6 rounded-full shadow-md cursor-pointer text-md text-zinc-200 bg-zinc-800"
           onClick={() => setTheme('light')}
         >
           <FiSun />
