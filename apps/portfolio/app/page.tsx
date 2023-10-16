@@ -17,7 +17,7 @@ const socialLinks = [
   {
     name: 'Github',
     href: 'https://www.github.com/anindya-dey',
-    icon: <FaGithub className="text-[#111111]" />,
+    icon: <FaGithub className="text-[#111111] dark:text-zinc-300" />,
   },
   {
     name: 'Instagram',
@@ -41,8 +41,10 @@ export default async function Index() {
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-purple-400">Anindya Dey</h1>
-      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-purple-400">
+      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-zinc-400">
+        Anindya Dey
+      </h1>
+      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-zinc-400">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
@@ -53,7 +55,7 @@ export default async function Index() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="p-2 mx-3 transition duration-300 ease-in-out bg-white rounded-md shadow-md first-letter:hover:-translate-y-1 md:p-3 md:mx-4">
+            <div className="p-2 mx-3 transition duration-300 ease-in-out bg-white rounded-md shadow-md dark:bg-zinc-900 dark:border dark:border-zinc-700 hover:-translate-y-1 md:p-3 md:mx-4">
               <span className="text-2xl md:text-md">{social.icon}</span>
             </div>
           </Link>
@@ -63,7 +65,7 @@ export default async function Index() {
         <Link
           href={'resume.pdf'}
           download
-          className="hover:transition-all flex justify-center items-center px-8 py-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476]  hover:to-[#fa5252ef]"
+          className="hover:transition-all flex justify-center items-center px-8 py-4 text-lg text-white rounded-l-full rounded-r-full shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:from-[#DD2476] hover:to-[#fa5252ef]"
         >
           <span className="mr-2">
             <AiOutlineCloudDownload className="text-lg" />

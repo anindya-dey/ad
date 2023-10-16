@@ -38,7 +38,7 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <nav className="fixed top-0 flex justify-between w-full px-6 py-2 m-0 shadow-sm md:static md:px-0 md:py-8 bg-white/30 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent md:shadow-none">
+    <nav className="fixed top-0 flex justify-between w-full px-6 py-2 m-0 shadow-sm md:static md:px-0 md:py-8 bg-white/30 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent md:shadow-none dark:bg-zinc-700/20 md:dark:bg-transparent">
       <div className="">
         <Link href={'/'}>
           <Image src={'/logo.png'} alt="logo" width={64} height={64} />
@@ -50,8 +50,8 @@ export default function NavBar() {
             <div
               className={
                 path === page.href
-                  ? 'hidden md:flex items-center justify-center px-6 py-3 mx-4 text-white rounded-md shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476]'
-                  : 'hidden md:flex items-center justify-center px-6 py-3 mx-4 text-gray-700 rounded-md shadow-md bg-white dark:text-purple-200 dark:bg-purple-900'
+                  ? 'hidden md:flex items-center justify-center px-6 py-3 ml-6 text-white rounded-md shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476]'
+                  : 'hidden md:flex items-center justify-center px-6 py-3 ml-6 text-gray-700 rounded-md shadow-md bg-white dark:text-zinc-200 dark:bg-zinc-800'
               }
             >
               <span className="mr-2 text-md">{page.icon}</span>
