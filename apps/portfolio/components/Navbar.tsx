@@ -42,13 +42,13 @@ export default function NavBar() {
           <div className={
                 path === page.href
                 ? "flex items-center justify-center px-6 py-3 mx-4 text-white rounded-md shadow-md bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
-                : "flex items-center justify-center px-6 py-3 mx-4 text-gray-700 rounded-md shadow-md bg-white/30 backdrop-blur-sm"}>
+                : "flex items-center justify-center px-6 py-3 mx-4 text-gray-700 rounded-md shadow-md bg-white/50 backdrop-blur-sm"}>
             <span className="mr-2 text-md">{page.icon}</span>
             <span className="text-sm">{page.name}</span>
           </div>
         </Link>
       ))}
-      <div className="items-center p-4 ml-4 rounded-full shadow-md cursor-pointer bg-white/30 backdrop-blur-sm text-md">
+      <div className="items-center p-4 ml-4 rounded-full shadow-md cursor-pointer bg-white/50 backdrop-blur-sm text-md">
         <FiMoon />
       </div>
     </>
