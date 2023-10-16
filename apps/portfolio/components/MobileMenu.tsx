@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
-export default function MobileMenu({ setMobileMenuOpen }) {
+export default function MobileMenu({ setMobileMenuOpen }: { setMobileMenuOpen: Dispatch<SetStateAction<boolean>> }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
