@@ -1,5 +1,6 @@
 import './global.css';
 import NavBar from '../components/Navbar';
+import Providers from './providers';
 
 export default function RootLayout({
   children,
@@ -7,14 +8,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-fixed bg-center bg-no-repeat bg-cover bg-homeBg dark:bg-homeBg-dark font-poppins">
-        <div className="container">
-          <NavBar />
-          <main className="flex flex-col items-center mt-6 md:mt-0 md:border-white md:border md:drop-shadow-md md:bg-white/10 md:rounded-2xl md:backdrop-blur-sm">
-            {children}
-          </main>
-        </div>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className="w-full h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-homeBg dark:bg-homeBg-dark font-poppins">
+        <Providers>
+          <div className="container">
+            <NavBar />
+            <main className="flex flex-col items-center mt-6 md:mt-0 md:border-white md:border md:drop-shadow-md md:bg-white/10 md:rounded-2xl md:backdrop-blur-sm dark:md:border-purple-800 dark:bg-purple-900/10">
+              {children}
+            </main>
+          </div>
+        </Providers>
       </body>
     </html>
   );
