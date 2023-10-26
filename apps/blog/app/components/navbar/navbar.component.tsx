@@ -26,9 +26,11 @@ export function NavBar() {
 
   return (
     <>
-      {
-        navBarItems.map(navBarItem => <Link key={navBarItem.name} href={navBarItem.href}>{navBarItem.displayName}</Link>)
-      }
+      {navBarItems.map((navBarItem) => (
+        <Link key={navBarItem.name} href={navBarItem.href}>
+          {navBarItem.displayName} - {pathname}
+        </Link>
+      ))}
     </>
   );
 }
