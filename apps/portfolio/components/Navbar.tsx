@@ -67,7 +67,7 @@ export default function NavBar() {
         </div>
       </div>
       {isMobileMenuOpen ? (
-        <div className="flex flex-col justify-start min-h-screen p-6 bg-zinc-700/80 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent dark:bg-zinc-900/30 md:dark:bg-transparent md:hidden dark:border-b dark:border-zinc-900" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <div className="flex flex-col justify-start min-h-screen p-6 bg-zinc-700/80 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent dark:bg-zinc-900/30 md:dark:bg-transparent md:hidden dark:border-b dark:border-zinc-900" onClick={() => setIsMobileMenuOpen(false)}>
           {navItems.map((navItem) => (
             <Link key={navItem.name} href={navItem.href} prefetch>
               <div
