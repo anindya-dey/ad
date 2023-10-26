@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,6 +10,7 @@ import { CgNotes } from 'react-icons/cg';
 import { RiContactsBookLine } from 'react-icons/ri';
 import ThemeSwitch from './ThemeSwitch';
 import MobileMenu from './MobileMenu';
+import { MobileMenuContext } from '../app/providers';
 
 const navItems = [
   {
@@ -36,7 +37,7 @@ const navItems = [
 
 export default function NavBar() {
   const path = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isMobileMenuOpen } = useContext(MobileMenuContext);
 
   return (
     <nav className="fixed top-0 flex flex-col w-full md:static">
@@ -62,16 +63,16 @@ export default function NavBar() {
             </Link>
           ))}
           <ThemeSwitch />
-          <MobileMenu setMobileMenuOpen={setMobileMenuOpen} />
+          <MobileMenu />
         </div>
       </div>
-      {mobileMenuOpen ? (
-        <div className="flex flex-col justify-between p-6 shadow-md md:hidden dark:border-b dark:border-zinc-800">
+      {isMobileMenuOpen ? (
+        <div className="flex flex-col justify-between p-6 shadow-md bg-white/30 backdrop-blur-lg md:backdrop-blur-none md:bg-transparent dark:bg-zinc-700/20 md:dark:bg-transparent md:hidden dark:border-b dark:border-zinc-800">
           {navItems.map((navItem) => (
             <Link key={navItem.name} href={navItem.href} prefetch>
               <div
                 key={navItem.name}
-                className="flex items-center my-3 font-light"
+                className="flex items-center my-3 font-medium text-zinc-900/70 dark:text-white/70"
               >
                 <span className="mr-4 text-lg">{navItem.icon}</span>
                 <span className="text-md">{navItem.name}</span>
