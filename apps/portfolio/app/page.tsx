@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
-import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub, FaStackOverflow } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: 'Portfolio | Anindya Dey',
@@ -28,6 +28,11 @@ const socialLinks = [
     name: 'Twitter',
     href: 'https://twitter.com/anindyadey01',
     icon: <FaTwitter className="text-[#1C9CEA]" />,
+  },
+  {
+    name: 'Twitter',
+    href: 'https://stackoverflow.com/users/13584363/anindya-dey',
+    icon: <FaStackOverflow className="text-[#f68f1a]" />,
   },
 ];
 
