@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
-import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub, FaStackOverflow } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: 'Portfolio | Anindya Dey',
@@ -29,6 +29,11 @@ const socialLinks = [
     href: 'https://twitter.com/anindyadey01',
     icon: <FaTwitter className="text-[#1C9CEA]" />,
   },
+  {
+    name: 'Twitter',
+    href: 'https://stackoverflow.com/users/13584363/anindya-dey',
+    icon: <FaStackOverflow className="text-[#f68f1a]" />,
+  },
 ];
 
 export default async function Index() {
@@ -41,10 +46,10 @@ export default async function Index() {
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-white">
+      <h1 className="mt-10 text-3xl text-gray-800 md:text-4xl dark:text-white">
         Anindya Dey
       </h1>
-      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-white">
+      <h2 className="mt-2 text-sm text-gray-500 md:text-lg dark:text-white">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
