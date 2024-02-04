@@ -40,8 +40,8 @@ export default function NavBar() {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useContext(MobileMenuContext);
 
   return (
-    <nav className="fixed top-0 flex flex-col w-full md:static">
-      <div className="flex justify-between w-full px-6 py-2 shadow-sm bg-white/30 md:px-0 md:py-8 md:shadow-none dark:border-b dark:md:border-none dark:border-zinc-800 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent dark:bg-zinc-700/20 md:dark:bg-transparent">
+    <nav className="fixed top-0 z-10 flex flex-col w-full md:static">
+      <div className="flex justify-between w-full px-6 py-2 shadow-sm bg-white/40 md:px-0 md:py-8 md:shadow-none dark:border-b dark:md:border-none dark:border-zinc-800 backdrop-blur-md md:backdrop-blur-none md:bg-transparent dark:bg-zinc-700/20 md:dark:bg-transparent">
         <div>
           <Link href={'/'}>
             <Image src={'/logo.png'} alt="logo" width={64} height={64} />
