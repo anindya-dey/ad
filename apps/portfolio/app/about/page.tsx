@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="px-6 py-24 md:py-10">
+    <div className="px-6 py-20 md:py-10">
       <div className="text-4xl font-medium text-gray-900 md:text-4xl dark:text-white">
         About Me
       </div>
