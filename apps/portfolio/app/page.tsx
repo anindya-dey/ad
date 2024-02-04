@@ -46,10 +46,10 @@ export default async function Index() {
         width={250}
         height={250}
       />
-      <h1 className="mt-10 text-3xl font-thin text-gray-900 md:text-4xl dark:text-white">
+      <h1 className="mt-10 text-3xl text-gray-800 md:text-4xl dark:text-white">
         Anindya Dey
       </h1>
-      <h2 className="mt-2 text-sm font-thin text-gray-700 md:text-lg dark:text-white">
+      <h2 className="mt-2 text-sm text-gray-500 md:text-lg dark:text-white">
         Full-stack Software Developer
       </h2>
       <div className="flex items-center justify-between mt-10">
