@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 import PersonalInfoSection from '../../components/PersonalInfoSection';
+import WhatDoIDo from '../../components/WhatDoIDoSection';
 
 export const metadata: Metadata = {
   title: 'About | Anindya Dey',
@@ -39,6 +40,10 @@ export default function Page() {
           <PersonalInfoSection />
         </div>
       </div>
+      <div className="mt-16 text-4xl font-medium text-gray-900 md:text-4xl dark:text-white">
+        What do I do?
+      </div>
+      <WhatDoIDo />
     </div>
   );
 }
