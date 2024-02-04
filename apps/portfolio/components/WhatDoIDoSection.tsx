@@ -9,7 +9,7 @@ const whatDoIDo = [
     bgColor: 'bg-blue-200/30',
   },
   {
-    name: 'web-dev',
+    name: 'desktop-app-dev',
     imagePath: '/about/desktop-app-dev.svg',
     title: 'Desktop App Development',
     description:
